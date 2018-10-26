@@ -3,8 +3,8 @@ import React from 'react';
 import './Post.css';
 
 const post = (props) => (
-    <article className="Post">
-        <h1>Test title</h1>
+    <article className="Post" id={props.key}>
+        <a href={props.source}>{props.title}</a>
     </article>
 )
 
