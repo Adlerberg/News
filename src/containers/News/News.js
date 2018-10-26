@@ -37,7 +37,7 @@ class News extends Component {
                 key={post.id}
                 title={post.title}
                 source={post.url}
-                child={post.kids}
+                child={post.kids ? post.kids.length : 0}
                  />;
         });
     }
