@@ -19,13 +19,11 @@ class News extends Component {
       .then(res => res.json())
       .then(articles => {
         articles.map(item_id => {
-         // console.log(item_id);
           return fetch(`https://hacker-news.firebaseio.com/v0/item/${item_id}.json`)
           .then(res => res.json())
           .then(article => {
             const articles = this.state.articles.concat(article);
              this.setState({ articles: articles });
-             //console.log(this.state.articles)
         });
       });
       
@@ -36,13 +34,11 @@ class News extends Component {
     .then(res => res.json())
     .then(comment => {
         const comments = this.state.comments.concat(comment);
-    // console.log(kids)
     this.setState({comments: comments})
-    console.log(this.state.comments)
 })
 })
 
-)//.then(console.log(this.state.articles));
+)
   }
 
   onCommentsClickedHandler() {
